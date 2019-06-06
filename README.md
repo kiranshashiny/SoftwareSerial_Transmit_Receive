@@ -18,9 +18,10 @@ First Arduino is used to Transmit data. ( /dev/wchusbserial1410)
 Second Arduino is used to Receive data. ( /dev/wchusbserial1420)
 
 
-The Arduinos are wired as
+#### The Arduinos are wired as
 
 Pin 11 of Arduino1 is connected to Pin 11 of Arduino2. (Internally in software they are interchanged )
+
 Pin 10 of Arduino1 is connected to Pin 11 of Arduino2.
 
 
@@ -68,7 +69,6 @@ While the first Transmitter Arduino sends/transmits data - the other Arduino rec
 		
 		void loop() { // run over and over
 		  if (mySerial.available()) {
-		    //Serial.println("got something");
 		    char c = mySerial.read();
 		    Serial.print ( c);
 		  }else {
